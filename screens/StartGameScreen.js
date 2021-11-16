@@ -11,6 +11,7 @@ import {
 import Card from "../components/Card";
 import Colors from "../constants/colors";
 import Input from "../components/Input";
+import NumberContainer from "../components/numberContainer";
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -40,7 +41,8 @@ const StartGameScreen = (props) => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.around}>
-        <Text>Chosen Number: {selectedNumber}</Text>
+        <Text>Chosen Number:</Text>
+        <NumberContainer>{selectedNumber}</NumberContainer>
       </Card>
     );
   }
@@ -108,7 +110,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   around: {
-    margin: 10,
+    marginTop: 20,
     padding: 10,
   },
 });
