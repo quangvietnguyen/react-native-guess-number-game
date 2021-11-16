@@ -41,8 +41,12 @@ const StartGameScreen = (props) => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.around}>
-        <Text>Chosen Number:</Text>
+        <Text>Chosen Number</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
+        <Button
+          title="START GAME"
+          onPress={() => props.onStartGame(selectedNumber)}
+        />
       </Card>
     );
   }
@@ -112,6 +116,7 @@ const styles = StyleSheet.create({
   around: {
     marginTop: 20,
     padding: 10,
+    alignItems: "center",
   },
 });
 
