@@ -17,8 +17,11 @@ const GameOverScreen = (props) => {
           resizeMode="cover"
         />
       </View>
-      <BodyText>Number of rounds: {props.roundsNumber}</BodyText>
-      <BodyText>Number was: {props.userNumber}</BodyText>
+      <BodyText>
+        Number of rounds:{" "}
+        <Text style={styles.hightlight}>{props.roundsNumber}</Text> and the
+        Number was: <Text style={styles.hightlight}>{props.userNumber}</Text>
+      </BodyText>
       <Button title="NEW GAME" onPress={props.onRestart}></Button>
     </View>
   );
