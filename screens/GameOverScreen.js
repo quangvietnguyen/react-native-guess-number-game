@@ -9,7 +9,10 @@ const GameOverScreen = (props) => {
       <TitleText>Game Over!</TitleText>
       <View style={styles.imageContainer}>
         <Image
-          source={require("../assets/success.png")}
+          // source={require("../assets/success.png")}
+          source={{
+            uri: "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/A-Alamy-BXWK5E_vvmkuf.jpg",
+          }}
           style={styles.image}
           resizeMode="cover"
         />
