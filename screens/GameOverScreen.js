@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  hightlight: {
+    color: 
+  }
 });
 
 export default GameOverScreen;
