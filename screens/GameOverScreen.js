@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button, Image } from "react-native";
 import Colors from "../constants/colors";
 import BodyText from "../components/BodyText";
 import TitleText from "../components/TitleText";
+import StartButton from "../components/StartButton";
 
 const GameOverScreen = (props) => {
   return (
@@ -26,7 +27,7 @@ const GameOverScreen = (props) => {
           <Text style={styles.hightlight}>{props.userNumber}</Text>
         </BodyText>
       </View>
-      <Button title="NEW GAME" onPress={props.onRestart}></Button>
+      <StartButton onPress={props.onRestart}>NEW GAME</StartButton>
     </View>
   );
 };
