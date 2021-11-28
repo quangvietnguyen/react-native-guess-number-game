@@ -6,6 +6,7 @@ import {
   Alert,
   ScrollView,
   FlatList,
+  Dimensions,
 } from "react-native";
 import NumberContainer from "../components/numberContainer";
 import Card from "../components/Card";
@@ -74,6 +75,16 @@ const GameScreen = (props) => {
       ...curPastGuesses,
     ]);
   };
+
+  // if (Dimensions.get("window").height > 600) {
+  //   return <View></View>;
+  // }
+
+  let listContainerStyle = styles.listContainer;
+
+  if (Dimensions.get("window").width < 350) {
+    listContainerStyle = styles.listContainerBig;
+  }
   return (
     <View style={styles.screen}>
       <Text style={DefaultStyles.title}>Opponent's Guess</Text>
@@ -118,14 +129,16 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginTop: 20,
+    marginTop: Dimensions.get("window").height > 600 ? 20 : 5,
     width: 400,
     maxWidth: "90%",
   },
   listContainer: {
+    // width: Dimensions.get("window").width > 500 ? "60%" : "80%",
     width: "60%",
     flex: 1,
   },
+  listContainerBig: { width: "80%", flex: 1 },
   list: {
     // flex: 1,
     flexGrow: 1,
